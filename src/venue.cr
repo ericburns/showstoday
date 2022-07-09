@@ -30,6 +30,5 @@ class Venue(T)
   # def from_json(json_string)
   #   venue_data = JSON.parse(json_string)
 
-
   # end
 end
