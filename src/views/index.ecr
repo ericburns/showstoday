@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Shows Today</title>
+  <link rel="stylesheet" href="/css/pico.classless.min.css">
+</head>
+<body>
+  <main>
+    <hgroup>
+      <h1>Shows Today</h1>
+      <h2><%= today.to_s("%a, %b %-d") %></h2>
+    </hgroup>
+
+    <% venues.each do |venue| %>
+      <% unless venue.events_on(today).empty? %>
+        <h3>@ <%= venue.name %></h3>
+        <% venue.events_on(today).each do |event| %>
+          <div>
+            <mark><%= event.name %></mark>
+            <div><a href="<%= event.url %>">BUY TICKETS</a></div>
+            <p>
+              <%= event.time %><br>
+              <%= event.price %>
+            </p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </main>
+</body>
+</html>

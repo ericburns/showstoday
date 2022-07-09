@@ -1,0 +1,22 @@
+name: showstoday
+version: 0.1.0
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+    version: ~> 1.2.0
+  crest:
+    github: mamantoha/crest
+    version: ~> 1.3.1
+  lexbor:
+    github: kostya/lexbor
+    version: ~> 3.0.4
+  redis:
+    github: stefanwille/crystal-redis
+    version: ~> 2.8.3
+
+# development_dependencies:
+#   webmock:
+#     github: manastech/webmock.cr
+
+# license: MIT
